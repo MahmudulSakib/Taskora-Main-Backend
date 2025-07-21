@@ -1,0 +1,1 @@
+ALTER TABLE "bonus_withdraw_requests" RENAME COLUMN "mobile_service" TO "mobile_bank_type";

@@ -1,0 +1,1 @@
+ALTER TABLE "user_ai_subscriptions" ADD COLUMN "status" text DEFAULT 'pending' NOT NULL;

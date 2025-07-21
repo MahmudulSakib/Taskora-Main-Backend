@@ -1,0 +1,1 @@
+ALTER TABLE "bonus_withdraw_requests" ADD COLUMN "bank_name" text;
