@@ -4,12 +4,14 @@ import cloudinary from "../cloudinary";
 import { db } from "../db";
 import { usersTable } from "../db/schema";
 import { eq } from "drizzle-orm";
+import passport from "../security/passportconfig";
 
 const upload = multer({ storage: multer.memoryStorage() });
 const clientInfo = express.Router();
 
 clientInfo.post(
   "/client/update-profile",
+  passport.authenticate("jwt", { session: false }),
   upload.single("profileImage"),
   async (req: any, res: any) => {
     const { id, fullName, mobileNumber, email, gender, address, country } =
