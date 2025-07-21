@@ -5,9 +5,13 @@ const clientLogout = express.Router();
 
 clientLogout.post(
   "/client/log-out",
-  passport.authenticate("jwt", { session: false }),
+
   (req, res) => {
-    res.clearCookie("clienttoken");
+    res.clearCookie("clienttoken", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    });
     res.status(200).json({ message: "Logged out successfully" });
   }
 );
