@@ -27,7 +27,7 @@ clientfogotPassword.post(
       expiresAt,
     });
 
-    const resetLink = `http://localhost:3001/reset-password?token=${token}`;
+    const resetLink = `https://taskora-main-ui.vercel.app/reset-password?token=${token}`;
 
     const transporter = nodemailer.createTransport({
       service: "Gmail",

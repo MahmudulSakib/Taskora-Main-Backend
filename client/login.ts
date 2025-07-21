@@ -29,8 +29,8 @@ clientLogin.post("/client/log-in", (req: any, res: any, next: any) => {
 
       res.cookie("clienttoken", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "strict",
+        secure: true,
+        sameSite: "none",
         maxAge: 6 * 60 * 60 * 1000,
       });
 

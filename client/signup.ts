@@ -323,7 +323,7 @@ clientSignup.post("/client/sign-up", async (req: any, res: any) => {
       amount: "0",
     });
 
-    const verifyUrl = `http://localhost:3001/verify?token=${token}`;
+    const verifyUrl = `https://taskora-main-ui.vercel.app/verify?token=${token}`;
     await transporter.sendMail({
       from: `"Life Good" <${process.env.SMTP_USER}>`,
       to: email,

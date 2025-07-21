@@ -30,15 +30,16 @@ import clientCarousel from "./client/clientcarousel";
 const app = express();
 const port = process.env.PORT || 5000;
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
-
 app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: [
+      "https://taskora-admin-ui.vercel.app",
+      "https://taskora-main-ui.vercel.app",
+    ],
     credentials: true,
   })
 );
