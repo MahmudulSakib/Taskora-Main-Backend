@@ -28,7 +28,7 @@ import vendorShipRoute from "./client/clientvendorship";
 import clientCarousel from "./client/clientcarousel";
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
 
