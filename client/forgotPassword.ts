@@ -18,6 +18,9 @@ clientfogotPassword.post(
     if (!user) {
       return res.json({ message: "Your email is not registered." });
     }
+    if (!user.isVerified) {
+      return res.json({ message: "Your email is not verified" });
+    }
     const token = nanoid(32);
     const expiresAt = new Date(Date.now() + 1000 * 60 * 60);
 
