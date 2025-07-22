@@ -30,7 +30,11 @@ passport.use(
 
         const match = await bcrypt.compare(password, user.password);
         if (!match) return done(null, false, { message: "Incorrect password" });
-
+        if (!user.isVerified) {
+          return done(null, false, {
+            message: "Please verify your email before logging in.",
+          });
+        }
         return done(null, user);
       } catch (err) {
         return done(err);
