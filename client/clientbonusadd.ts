@@ -1,4 +1,3 @@
-// routes/bonusAd.ts
 import express from "express";
 import { db } from "../db";
 import { userBonusWalletTable } from "../db/schema";

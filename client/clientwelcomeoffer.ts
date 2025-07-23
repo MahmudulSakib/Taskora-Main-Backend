@@ -1,4 +1,3 @@
-// routes/clientWelcomeOffer.ts
 import express from "express";
 import { db } from "../db";
 import { usersTable, userBonusWalletTable } from "../db/schema";

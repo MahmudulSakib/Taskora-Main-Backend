@@ -1,4 +1,3 @@
-// routes/client/notifications.ts
 import express from "express";
 import passport from "../security/passportconfig";
 import { db } from "../db";

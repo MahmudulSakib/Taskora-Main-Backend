@@ -1,4 +1,3 @@
-// /client/quiz.ts
 import express from "express";
 import { db } from "../db";
 import { quizzesTable, quizSubmissionsTable } from "../db/schema";
